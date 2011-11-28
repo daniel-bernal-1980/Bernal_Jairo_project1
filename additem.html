@@ -46,7 +46,7 @@
 						<legend><h4>Site Development</h4></legend>
 						<ul>				
 							<li><input type="radio" checked value="sitePlan" id="sitePlan" name="siteDev" /><label for="sitePlan">Site Plan</label></li>
-							<li><input type="radio" value="mastPlan" id="mastPlan" name="siteDev" /><label for="mastPlan">Master Plan</label></li>
+							<li><input type="radio" value="mastPlan" id="mastPlan" name="siteDev" /><label for="mastPlan">Master Plan</label><label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Phase:</label><input type="text" id="type" /></li>
 							<li><input type="radio" value="both" id="both" name="siteDev" /><label for="both">Both</label></li>
 						</ul>
 				</div>
@@ -56,10 +56,20 @@
 						<ul>				
 							<li>CAD Drawings:
 								<ul>				
-									<li><input type="checkbox" value="flPlan" id="flPlan" /><label for="flPlan">Floor Plans</label></li>
+									<li><input type="checkbox" value="flPlan" id="flPlan" /><label for="flPlan">Floor Plans</label> <label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Type:</label><input type="text" id="type" /></li>
 									<li><input type="checkbox" value="rfPlan" id="rfPlan" /><label for="rfPlan">Roof Plans</label></li>
-									<li><input type="checkbox" value="elv" id="elv" /><label for="elv">Elevations</label></li>
-									<li><input type="checkbox" value="scPlan" id="scPlan" /><label for="scPlan">Sections</label></li>
+									<li><input type="checkbox" value="elv" id="elv" /><label for="elv">Elevations</label> <label for="view">&nbsp;&nbsp;&nbsp;&nbsp;Views:</label>
+										<select id="view">
+											<optgroup label="Views">
+												<option value="North">North</option>
+												<option value="South">South</option>
+												<option value="East">East</option>
+												<option value="West">West</option>
+												<option value="All">All Views</option>
+											</optgroup>
+										</select>
+									</li>
+									<li><input type="checkbox" value="scPlan" id="scPlan" /><label for="scPlan">Sections</label> <label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Type:</label><input type="text" id="type" /></li>
 									<li><label for="comments">Notes:</label><textarea id="comments"></textarea></li>						
 								</ul>
 							</li>
@@ -74,25 +84,22 @@
 							</li>
 						</ul>
 				</div>
-				<div id="building">
+				<div id="interior">
 					<fieldset>
-						<legend><h4>Building Envelope</h4></legend>
+						<legend><h4>Interior Design</h4></legend>
 						<ul>				
 							<li>CAD Drawings:
 								<ul>				
-									<li><input type="checkbox" value="flPlan" id="flPlan" /><label for="flPlan">Floor Plans</label></li>
-									<li><input type="checkbox" value="rfPlan" id="rfPlan" /><label for="rfPlan">Roof Plans</label></li>
-									<li><input type="checkbox" value="elv" id="elv" /><label for="elv">Elevations</label></li>
-									<li><input type="checkbox" value="scPlan" id="scPlan" /><label for="scPlan">Sections</label></li>
+									<li><input type="checkbox" value="flpPlan" id="flpPlan" /><label for="flpPlan">Floor Pattern Plans</label></li>
+									<li><input type="checkbox" value="clPlan" id="clPlan" /><label for="clPlan">Reflecting Ceiling Plans</label></li>
+									<li><input type="checkbox" value="frnPlan" id="frnPlan" /><label for="frnPlan">Furniture Plans</label></li>
 									<li><label for="comments">Notes:</label><textarea id="comments"></textarea></li>						
 								</ul>
 							</li>
 							<li>3D Work:
 								<ul>				
 									<li><input type="checkbox" value="model" id="model" /><label for="model">3D Model</label></li>
-									<li><input type="checkbox" value="phModel" id="phModel" /><label for="phModel">Physical Model</label></li>
 									<li><input type="checkbox" value="rend" id="rend" /><label for="rend">Renderings</label></li>
-									<li><input type="checkbox" value="anim" id="anim" /><label for="anim">Animations</label></li>
 									<li><label for="comments">Notes:</label><textarea id="comments"></textarea></li>						
 								</ul>
 							</li>
